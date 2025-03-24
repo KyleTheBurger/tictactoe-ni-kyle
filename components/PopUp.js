@@ -34,3 +34,5 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
 });
+
+//tig rrun mo man ni sir?
