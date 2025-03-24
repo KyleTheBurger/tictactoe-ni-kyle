@@ -29,7 +29,16 @@ export default function InGameScreen({ onScreenChange }) {
       <TictactoeTable />
       <Button title="NEW GAME" onPress={resetBoard} width="200" />
       <Button title="EXIT GAME" onPress={() => onScreenChange(1)} width="200" />
-      {showPopup && <PopUp message={winner === "Draw" ? "IT'S A DRAW!" : `${winner} WINS!`} onClose={handleNextRound} />}
+      {showPopup && (
+        <PopUp
+          message={
+            winner === "Draw"
+              ? "IT'S A DRAW!"
+              : `${winner === "X" ? "Player 1" : "Player 2"} WINS!`
+          }
+          onClose={handleNextRound}
+        />
+      )}
     </View>
   );
 }
